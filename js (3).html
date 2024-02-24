@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Personal Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    body {
+        margin: 0;
+        font-family: Rethink Sans;
+        background: linear-gradient(45deg, red, blue);
+        animation: rt 5s infinite ease;
+        background-size: 100% 350%;
+
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            width: 320px;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            padding: 3%;
+
+        }
+
+        .containerform {
+            width: 320px;
+        }
+
+        .containerform input {
+            width: calc(100% - 40px);
+            margin-right: 20px;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+
+        #submit-btn {
+            width: 40px;
+            margin-left: 10px;
+            margin-top: 5%;
+            margin-bottom: 2%;
+        }
+
+        @keyframes rt {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 30% 30%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+
+        }
+
+
+
+    }
+
+    @keyframes rt {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        50% {
+            background-position: 100% 90%;
+        }
+
+        100% {
+            background-position: 0% 0%;
+        }
+
+    }
+
+    .navbar {
+
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        padding: 5px;
+        background-color: black;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        max-height:20px;
+        
+    }
+
+    .container {
+        border: 2px solid white;
+
+        border-radius: 15px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 5%;
+        background-color: white;
+    }
+
+    .containerform {
+        border: 2px solid white;
+        border-radius: 15px;
+        max-width: 800px;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 5%;
+        background-color: white;
+    }
+
+    button {
+        background-color: black;
+        border: none;
+        color: white;
+        font-family: Rethink Sans;
+
+    }
+    
+
+    #homepic {
+        width: 200px;
+        border-radius: 10px;
+        border: 2px solid black;
+        transition: all 1s ease;
+    }
+
+    h2 {
+        transition: all 0.7s ease;
+        background: linear-gradient(45deg, blue, red);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 2rem;
+
+    }
+
+    h2:hover {
+        font-size: 2.4rem;
+    }
+
+    .para {
+        border: 2px solid black;
+        border-radius: 10px;
+        font-weight: 600;
+        padding: 10px;
+
+    }
+
+    .paraskills {
+        font-size: large;
+        font-weight: 600;
+        padding: 10px;
+
+    }
+
+    #myform {
+        font-size: large;
+        font-weight: 600;
+        padding: 10px;
+
+    }
+
+    #Home-btn {
+        border-bottom: 2px solid cyan;
+    }
+
+    #home {
+        transition: all 2s ease;
+    }
+
+    #about-me {
+        display: none;
+        transition: all 2s ease;
+    }
+
+    #skills {
+        display: none;
+        transition: all 2s ease;
+    }
+
+    #education {
+        display: none;
+        transition: all 2s ease;
+    }
+
+    #projects {
+        display: none;
+        transition: all 2s ease;
+    }
+
+    #faq {
+        display: none;
+        transition: all 2s ease;
+    }
+
+    label {
+
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    input {
+        margin-right: 20%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border: none;
+        border-bottom: 1px dashed black;
+        border-radius: 2px;
+        height: 25px;
+        width: 550px;
+    }
+
+    #submit-btn {
+        font-family: Rethink Sans;
+        text-align: center;
+        margin-left: 40%;
+        margin-top: 5%;
+        margin-bottom: 2%;
+        width: 150px;
+
+        background-color: rgba(53, 156, 220, 0.351);
+        border: none;
+        border: 2px solid white;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 700;
+        border-radius: 5px;
+        padding: 0.3%;
+        padding-top: 0.6%;
+        transition: all 0.3s ease;
+    }
+
+    #submit-btn:active,
+    #hi-btn:active,
+    .qbtns button:active,
+    .mainques p:active {
+        border: solid 2px black;
+    }
+
+    input:hover {
+        border: 1px solid black;
+    }
+
+    #hi-btn {
+        font-family: Rethink Sans;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 2%;
+        width: 20%;
+        animation: rtt 5s infinite ease;
+        background-color: rgba(53, 156, 220, 0.351);
+        border: none;
+        border: 2px solid white;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 700;
+        border-radius: 5px;
+        padding: 0.3%;
+        padding-top: 0.6%;
+        transition: all 0.3s ease;
+    }
+
+    @keyframes rtt {
+        0% {
+            border: 2px solid red;
+        }
+
+        50% {
+            border: 2px solid blue;
+        }
+
+        100% {
+            border: 2px solid red;
+        }
+    }
+
+    #chatbox {
+        display: none;
+
+    }
+
+    #chatimg {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: sticky;
+    }
+
+    .chatme {
+        background-color: rgba(0, 0, 0, 0.22);
+        display: flex;
+        align-items: center;
+        max-width: 800px;
+        border-left: 2px solid red;
+        padding-left: 5px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-bottom: 30px;
+    }
+
+    .chatme p {
+        margin-left: 10px;
+
+        font-weight: 600;
+        align-items: center;
+
+    }
+
+    .chatuser {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 800px;
+        align-items: center;
+        border-right: 2px solid green;
+        padding-right: 5px;
+    }
+
+    .chatuser p {
+        margin-right: 10px;
+        font-weight: 600;
+        align-items: center;
+    }
+
+    .qbtns {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        align-items: end;
+
+
+    }
+
+    .qbtns button {
+        font-family: Rethink Sans;
+        text-align: left;
+        margin: 2px;
+        width: 200px;
+        background-color: rgba(53, 156, 220, 0.351);
+        border: none;
+        border: 2px solid white;
+        color: black;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 10px;
+
+        transition: all 0.3s ease;
+
+    }
+
+    .mainques p {
+        background-color: lightgreen;
+        border-radius: 10px;
+        padding: 5px;
+        text-align: left;
+        margin: 2px;
+        transition: all 0.1s ease;
+        border: 2px solid white;
+    }
+
+    .mainques {
+        display: none;
+    }
+
+    #homepic:hover {
+        width: 250px;
+        border-radius: 15px;
+        border: 2px solid black;
+    }
+
+    .navbar button:hover {
+        border-bottom:2px solid cyan;
+        
+        
+    }
+
+    .web img,
+    .pl img {
+        border-radius: 20px;
+        width: 50px;
+        padding: 5px;
+    }
+
+    .img {
+        width: 250px;
+        position: relative;
+        margin-left: 20px;
+        border-radius: 20px;
+    }
+
+    .img:hover {
+        border: 2px solid violet;
+    }
+
+    .img:hover .description {
+        display: block;
+
+    }
+
+    .chatbot-container {
+        width: 500px;
+        margin: 0 auto;
+        background-color: #f8e0e0;
+        border: 1px solid #0a0101;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(39, 8, 214, 0.1);
+    }
+
+    #chatbot {
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+    }
+
+    #header {
+        background-color: rgb(93, 109, 109);
+        color: #ffffff;
+        padding: 20px;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    message-container {
+
+        width: 100%;
+        display: flex;
+    }
+
+
+
+    #conversation {
+        height: 400px;
+        overflow-y: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @keyframes message-fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .chatbot-message {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 20px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .user-message {
+        justify-content: flex-end;
+    }
+
+
+    .chatbot-text {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #000000;
+        font-size: 1.1em;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-width: 60%;
+
+    }
+
+    #input-form {
+        display: flex;
+        border-top:2px solid black;
+
+    }
+
+    #input-field {
+        flex: 1;
+        height: 60px;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: border-color 0.3s;
+        color: #000000;
+        border: none;
+        text-align: right;
+        font-family: Rethink Sans;
+        font-weight: 600;
+    }
+
+    .send-icon {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    #input-field:focus {
+        outline: none;
+    }
+
+    #submit-button {
+        background-color: transparent;
+        border: none;
+    }
+
+    p[sentTime]:hover::after {
+        content: attr(sentTime);
+        position: absolute;
+        top: -3px;
+        font-size: 14px;
+        color: gray;
+    }
+
+    .chatbot p[sentTime]:hover::after {
+        left: 15px;
+    }
+
+    .user-message p[sentTime]:hover::after {
+        right: 15px;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+
+    .description {
+        display: none;
+
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgb(250, 255, 176);
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid rgba(0, 0, 0, 0.42);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        z-index: 1;
+    }
+
+    .web,
+    .pl {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+
+    }
+
+    h3 {
+        margin-top: 20px;
+        text-align: center;
+        color: cadetblue;
+        font-family: Rethink Sans;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <button id="AboutMe-btn" onclick="aboutmebtn()">About Me</button>
+        <button id="Skills-btn" onclick="skillsbtn()">Skills</button>
+        <button id="Home-btn" onclick="homebtn()">Home</button>
+        <button id="Education-btn" onclick="educationbtn()">Education</button>
+        <button id="Projects-btn" onclick="projectsbtn()">Contact Me</button>
+        <button id="Faq-btn" onclick="faqbtn()">FAQs</button>
+    </div>
+
+    <div class="container" id="home">
+        <img src="https://github.com/zvbrsten/zvbrsten/blob/main/4f0f197f-f322-4b8c-89c4-2a79a4832e71.png?raw=true"
+            id="homepic">
+        <h1>Yash Sharma</h1>
+        <h2>A student</h2>
+        <div class="para">
+            <p>Passionate B.Tech CS student specializing in Blockchain
+                Technology seeking an internship opportunity to apply
+                problem-solving skills and technological expertise for
+                innovative projects, contributing to organizational growth
+                and development.</p>
+
+        </div>
+    </div>
+    <div class="container" id="about-me">
+        <h2>About Me</h2>
+        <p>
+            Hello! My name is Yash Sharma, and I'm thrilled to share a bit about myself with you. I am a dedicated and
+            enthusiastic individual with a deep passion for technology and innovation. Here's a closer look at who I am,
+            what I do, and what drives me:
+        </p>
+        <h2>Personal Background</h2>
+        <p>
+            I was born and raised in Lakhimpur Kheri, where I developed a fascination for computers and technology at a
+            young age. Growing up, I spent countless hours tinkering with computers, exploring programming languages,
+            and diving into various software projects. This early exposure sparked my interest in pursuing a career in
+            the field of computer science.
+        </p>
+        <h2>Interests and Hobbies</h2>
+        <p>
+            Outside of my academic and professional pursuits, I enjoy exploring new technologies, attending tech meetups
+            and conferences, and engaging in discussions on emerging trends in the tech industry. I am also an avid
+            reader, fitness enthusiast, and occasional traveler, always seeking new experiences and opportunities for
+            personal growth.
+        </p>
+    </div>
+    <div class="container" id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <h3 class="web-title">Web Development</h3>
+            <div class="web">
+                <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/htmllogo.jpg?raw=true"><span
+                        class="description">HTML - I am proficient in HTML and have experience in building semantic and
+                        accessible web pages.</span></div>
+                <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/csslogo.jpg?raw=true"><span
+                        class="description">CSS - I have strong skills in CSS and can style web pages to achieve desired
+                        layouts and designs.</span></div>
+                <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/jslogo.jpg?raw=true"><span
+                        class="description">JavaScript - I am skilled in JavaScript and can create interactive and
+                        dynamic web applications.</span></div>
+            </div>
+            <h3 class="pl-title">Programming Languages</h3>
+            <div class="pl">
+                <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/clogo.jpg?raw=true"><span
+                        class="description">C - I have proficiency in C programming language and can develop efficient
+                        algorithms and data structures.</span></div>
+                <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/c++logo.jpg?raw=true"><span
+                        class="description">C++ - I have advanced knowledge of C++ and can develop complex software
+                        applications.</span></div>
+                <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/plogo.png?raw=true"><span
+                        class="description">Python - I am proficient in Python and have experience in web development,
+                        data analysis, and automation.</span></div>
+            </div>
+            <h3 class="languages">Languages</h3>
+            <div class="pl">
+                <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/hindilogo.png?raw=true"></div>
+                <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/englogo.png?raw=true"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="container" id="education">
+        <h2>Education</h2>
+        <h3 class="web-title">Primary Education</h3>
+        <div class="web" style="margin-right:15px">
+            <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/cbselogo.jpg?raw=true"><span
+                    class="description">Class 10: 92.2%<br>Class 12: 90.2%</span></div>
+        </div>
+
+        <h3 class="web-title">Graduation</h3>
+
+        <div class="web" style="margin-right:15px">
+            <div class="img"><img src="https://github.com/zvbrsten/zvbrsten/blob/main/vitlogo.jpg?raw=true"><span
+                    class="description" style="width:300px;">Doing B.tech in Computer Science with specialization in
+                    Blockchain Technology at VIT University,Vellore.<br>Graduation year:2026<br>Current CGPA:8.9</bt>
+                    </span></div>
+        </div>
+
+    </div>
+    <div class="containerform" id="projects">
+        <h2 align="center">Contact Me</h2>
+        <form id="myForm">
+
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="contact">Contact:</label><br>
+            <input type="text" id="contact" name="contact" required><br>
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" required><br>
+            <label for="message">Message:</label><br>
+            <input type="text" id="message" name="message" required><br>
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+        <p style="text-align: center;font-weight: 600;font-size: 1.2rem;">You can Always reach out to me on my social
+            media platforms !!</p>
+        <div class="web">
+
+            <div><a href="https://instagram.com/zvbyash">
+                    <img src="https://github.com/zvbrsten/zvbrsten/blob/main/insta%20logo.jpg?raw=true">
+                </a></div>
+            <div><a href="https://linkedin.com/in/yash-sharma-657a2524b"><img
+                        src="https://github.com/zvbrsten/zvbrsten/blob/main/linkedinlogo.jpg?raw=true"></a></div>
+            <div><a href="https://github.com/zvbrsten"><img
+                        src="https://raw.githubusercontent.com/zvbrsten/zvbrsten/main/githublogo.webp"></a></div>
+
+
+
+        </div>
+    </div>
+    <div class="container" id="faq">
+        <h2>Say Hi!!! to chat with my chatbot</h2>
+
+        <button id="hi-btn" onclick="chatbox()">Hi</button>
+        <div id="chatbox">
+            <h2 style="margin:0px;">Chatbot</h2>
+
+            <div id="chatbot">
+                <div id="conversation">
+                    <div class="chatbot-message">
+                        <p class="chatbot-text">Hi! I,m Yash👋 it's great to see you!</p>
+                    </div>
+                </div>
+                <form id="input-form">
+                    <message-container>
+                        <input id="input-field" type="text" placeholder="Type your message here">
+                        <button id="submit-button" type="submit">
+                            <img class="send-icon"
+                                src="https://github.com/zvbrsten/zvbrsten/blob/main/submitlogo.jpg?raw=true"
+                                style="width:50px;">
+                        </button>
+                    </message-container>
+                </form>
+            </div>
+
+        </div>
+        <script>
+            function aboutmebtn() {
+                document.getElementById("AboutMe-btn").style.borderBottom = "2px solid cyan";
+                document.getElementById("Skills-btn").style.borderBottom = "none";
+                document.getElementById("Home-btn").style.borderBottom = "none";
+                document.getElementById("Education-btn").style.borderBottom = "none";
+                document.getElementById("Projects-btn").style.borderBottom = "none";
+                document.getElementById("Faq-btn").style.borderBottom = "none";
+                document.getElementById("about-me").style.display = "block";
+                document.getElementById("skills").style.display = "none";
+                document.getElementById("home").style.display = "none";
+                document.getElementById("education").style.display = "none";
+                document.getElementById("projects").style.display = "none";
+                document.getElementById("faq").style.display = "none";
+
+
+            }
+            function skillsbtn() {
+                document.getElementById("AboutMe-btn").style.borderBottom = "none";
+                document.getElementById("Skills-btn").style.borderBottom = "2px solid cyan";
+                document.getElementById("Home-btn").style.borderBottom = "none";
+                document.getElementById("Education-btn").style.borderBottom = "none";
+                document.getElementById("Projects-btn").style.borderBottom = "none";
+                document.getElementById("Faq-btn").style.borderBottom = "none";
+                document.getElementById("about-me").style.display = "none";
+                document.getElementById("skills").style.display = "block";
+                document.getElementById("home").style.display = "none";
+                document.getElementById("education").style.display = "none";
+                document.getElementById("projects").style.display = "none";
+                document.getElementById("faq").style.display = "none";
+
+            }
+            function homebtn() {
+                document.getElementById("AboutMe-btn").style.borderBottom = "none";
+                document.getElementById("Skills-btn").style.borderBottom = "none";
+                document.getElementById("Home-btn").style.borderBottom = "2px solid cyan";
+                document.getElementById("Education-btn").style.borderBottom = "none";
+                document.getElementById("Projects-btn").style.borderBottom = "none";
+                document.getElementById("Faq-btn").style.borderBottom = "none";
+                document.getElementById("about-me").style.display = "none";
+                document.getElementById("skills").style.display = "none";
+                document.getElementById("home").style.display = "block";
+                document.getElementById("education").style.display = "none";
+                document.getElementById("projects").style.display = "none";
+                document.getElementById("faq").style.display = "none";
+
+            }
+            function educationbtn() {
+                document.getElementById("AboutMe-btn").style.borderBottom = "none";
+                document.getElementById("Skills-btn").style.borderBottom = "none";
+                document.getElementById("Home-btn").style.borderBottom = "none";
+                document.getElementById("Education-btn").style.borderBottom = "2px solid cyan";
+                document.getElementById("Faq-btn").style.borderBottom = "none";
+                document.getElementById("Projects-btn").style.borderBottom = "none";
+                document.getElementById("about-me").style.display = "none";
+                document.getElementById("skills").style.display = "none";
+                document.getElementById("home").style.display = "none";
+                document.getElementById("education").style.display = "block";
+                document.getElementById("projects").style.display = "none";
+                document.getElementById("faq").style.display = "none";
+
+            }
+            function projectsbtn() {
+                document.getElementById("AboutMe-btn").style.borderBottom = "none";
+                document.getElementById("Skills-btn").style.borderBottom = "none";
+                document.getElementById("Home-btn").style.borderBottom = "none";
+                document.getElementById("Education-btn").style.borderBottom = "none";
+                document.getElementById("Projects-btn").style.borderBottom = "2px solid cyan";
+                document.getElementById("Faq-btn").style.borderBottom = "none";
+                document.getElementById("about-me").style.display = "none";
+                document.getElementById("skills").style.display = "none";
+                document.getElementById("home").style.display = "none";
+                document.getElementById("education").style.display = "none";
+                document.getElementById("projects").style.display = "block";
+                document.getElementById("faq").style.display = "none";
+
+            }
+            function faqbtn() {
+                document.getElementById("AboutMe-btn").style.borderBottom = "none";
+                document.getElementById("Skills-btn").style.borderBottom = "none";
+                document.getElementById("Home-btn").style.borderBottom = "none";
+                document.getElementById("Education-btn").style.borderBottom = "none";
+                document.getElementById("Projects-btn").style.borderBottom = "none";
+                document.getElementById("Faq-btn").style.borderBottom = "2px solid cyan";
+                document.getElementById("about-me").style.display = "none";
+                document.getElementById("skills").style.display = "none";
+                document.getElementById("home").style.display = "none";
+                document.getElementById("education").style.display = "none";
+                document.getElementById("projects").style.display = "none";
+                document.getElementById("faq").style.display = "block";
+            }
+            function chatbox() {
+                document.getElementById("hi-btn").style.display = "none";
+                document.querySelector("#faq h2").innerHTML = "";
+                document.getElementById("chatbox").style.display = "block";
+            }
+
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("myForm");
+
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const formData = new FormData(form);
+                    const name = formData.get("name");
+                    const email = formData.get("email");
+                    const contact = formData.get("contact");
+                    const address = formData.get("address");
+                    const message = formData.get("message");
+
+
+                    const emailBody = `Name: ${name}\nEmail: ${email}\nContact: ${contact}\nAddress: ${address}\nMessage:${message}`;
+
+                    const mailtoLink = `mailto:zvbrsten@gmail.com?subject=For personal contact&body=${encodeURIComponent(emailBody)}`;
+                    window.location.href = mailtoLink;
+                });
+            });
+            const chatbot = document.getElementById('chatbot');
+            const conversation = document.getElementById('conversation');
+            const inputForm = document.getElementById('input-form');
+            const inputField = document.getElementById('input-field');
+
+
+            inputForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const input = inputField.value;
+
+                inputField.value = '';
+                const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" });
+
+                let message = document.createElement('div');
+                message.classList.add('chatbot-message', 'user-message');
+                message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${input}</p>`;
+                conversation.appendChild(message);
+
+                const response = generateResponse(input);
+
+                message = document.createElement('div');
+                message.classList.add('chatbot-message', 'chatbot');
+                message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${response}</p>`;
+                conversation.appendChild(message);
+                message.scrollIntoView({ behavior: "smooth" });
+            });
+
+            function generateResponse(input) {
+                const keywords = {
+                    "background": "Hi! I'm Yash Sharma, a tech enthusiast from Lakhimpur Kheri. Raised with a passion for technology, I immersed myself in computer exploration and programming from a young age. Now, I'm dedicated to pursuing a career in computer science. Beyond tech, I enjoy staying updated on industry trends, reading, fitness, and occasional travel, always seeking growth opportunities.",
+                    "skill": "I specialize in web development, mastering HTML, CSS, and JavaScript for user-friendly websites. Proficient in C, C++, and Python, I develop efficient algorithms and software solutions for diverse applications",
+                    "education": "I pursued my primary education with exceptional results, achieving 92.2% in Class 10 and 90.2% in Class 12. Currently, I'm pursuing a B.Tech in Computer Science with a specialization in Blockchain Technology at VIT University, Vellore, expecting to graduate in 2026 with a current CGPA of 8.9.",
+                    "qualification": "I pursued my primary education with exceptional results, achieving 92.2% in Class 10 and 90.2% in Class 12. Currently, I'm pursuing a B.Tech in Computer Science with a specialization in Blockchain Technology at VIT University, Vellore, expecting to graduate in 2026 with a current CGPA of 8.9.",
+
+                    "hello": "Hi There how can i help you :)",
+                    "hi": "Hello there how can i help you",
+                    "how are you": "I am doing well, thank you for asking",
+                    "what is your name": "My Name is Yash",
+                    "project": "I have made several projects like TicTacToe website,Snake and ladders website,Pesonal portfolio Website along with several other projects",
+                    "where are you from": "I am from Uttar Pradesh lucknow.",
+                    "contact": "You can contact me on my mail zvbrsten@gmail.com or simply go to the contact me page"
+                };
+
+                for (const keyword in keywords) {
+                    if (input.toLowerCase().includes(keyword)) {
+                        return keywords[keyword];
+                    }
+                }
+
+                return "I'm sorry, I couldn't understand your request. How can I assist you?";
+            }
+            ;
+        </script>
+</body>
+
+</html>
